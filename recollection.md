@@ -84,10 +84,71 @@ we can try to dump the file like this and see what type of content is present in
 
 ```
 qn:A malicious executable file was executed using command. The executable EXE file's name was the hash value of itself. What was the hash value?
+answer:
+PS C:\Users\user\Downloads> .\b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1.exe
+PS C:\Users\user\Downloads>  
+```
 
+```
+qn:Following the previous question, what is the Imphash of the malicous file you found above?
+
+NB:lmphash(import hash) so here we need first to dump the file itself so as to get the hash
+
+step 1: we need first to know the location of file in the memory dump
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/RECOLLECTION]
+└─$ volatility -f recollection.bin --profile=Win7SP0x64 filescan | grep -i "b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1.exe"
+Volatility Foundation Volatility Framework 2.6
+0x000000011fa45c20     16      0 -W-r-- \Device\HarddiskVolume2\Users\user\Downloads\b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1.exe
+0x000000011fc1db70      2      0 R--r-d \Device\HarddiskVolume2\Users\user\Downloads\b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1.exe
+
+
+step 2: after we have know the location we can try to dump the file based with its location
+offset:0x000000011fa45c20
+
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/RECOLLECTION]
+└─$ volatility -f recollection.bin --profile=Win7SP0x64 dumpfiles -n -D now1 -Q 0x000000011fa45c20                                              
+Volatility Foundation Volatility Framework 2.6
+ImageSectionObject 0x11fa45c20   None   \Device\HarddiskVolume2\Users\user\Downloads\b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1.exe
+DataSectionObject 0x11fa45c20   None   \Device\HarddiskVolume2\Users\user\Downloads\b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1.exe
+
+step 3: lets upload via virustotal and see what this type of file is,
+
+Popular threat label:      trojan.loki/stealer
+
+Threat categories:         trojan ransomware
+
+
+Family labels:            loki    stealer  smokeloader
+
+
+answer:lmphash: d3b592cd9481e4f053b5362e22d61595 
 ```
 
 
+```
+qn:Following the previous question, tell us the date in UTC format when the malicious file was created?
+
+This details can be see from the virustotal(online)
+asnwer:
+
+Creation Time:        2022-06-22 11:49:04 UTC
+First Submission:     2024-02-08 20:05:01 UTC
+Last Submission:      2024-02-26 00:58:02 UTC
+Last Analysis:        2024-02-20 15:33:27 UTC
+```
+
+```
+qn: What was the local IP address of the machine?
+
+In order to get the local machine ip address we can use a plugin=netscan
+
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/RECOLLECTION]
+└─$ volatility -f recollection.bin --profile=Win2008R2SP0x64 netscan
+answer:192.168.0.104
+
+0x11e3b2bf0        UDPv4    192.168.0.104:138              *:*                                   4        System         2022-12-19 15:32:47 UTC+0000                                                                                         
+
+```
 
 
 
