@@ -23,5 +23,26 @@ INFO    : volatility.debug    : Determining profile based on KDBG search...
 
 profile=Win7SP0x64 (windows 7)
 
+memory dump creation date: 2022-12-19 16:07:30 UTC+0000
+```
+
 
 ```
+After the attacker gained access to the machine, the attacker copied an obfuscated PowerShell command to the clipboard. What was the command?
+answer:PS C:\Users\user> (gv '*MDR*').naMe[3,11,2]-joIN'' 
+```
+
+```
+qn:The attacker copied the obfuscated command to use it as an alias for a PowerShell cmdlet. What is the cmdlet name?
+
+answer: Invoke-Expression
+
+resource used: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7.4
+```
+
+
+
+
+
+
+
