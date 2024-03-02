@@ -132,6 +132,10 @@ answer:10/08/2023 11:58:10
 NEW IDEA: NOP
 
 CHALLENGES: The big challenge here was my standalone volatility was not working so decide to check for volatility-master(V-python2) the got the same problem so decide to check for the last update from volatility3(V-python3) which worked
+
+REFERENCE:
+https://www.virustotal.com/gui/file/eaf09578d6eca82501aa2b3fcef473c3795ea365a9b33a252e5dc712c62981ea/details
+https://app.hackthebox.com/sherlocks/RogueOne
 ```
 
 
