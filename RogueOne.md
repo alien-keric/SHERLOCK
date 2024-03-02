@@ -66,7 +66,7 @@ PID     PPID    ImageFileName   Offset(V)       Threads Handles SessionId       
 10044   9952    OneDrive.exe    0x9e8b90507080  0       -       1       True    2023-08-10 11:15:31.000000      2023-08-10 11:15:37.000000      \Device\HarddiskVolume3\Users\simon.stark\AppData\Local\Microsoft\OneDrive\OneDrive.exe -   
 
 
-NB: as see there we have a PID that spawned the malicous process was triggered by the PID = 4364
+NB: as seen above, we have a PID that spawned the malicous process was triggered by the PID = 4364
 ```
 
 qn 3
