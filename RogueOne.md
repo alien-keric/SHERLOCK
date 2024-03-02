@@ -69,19 +69,69 @@ PID     PPID    ImageFileName   Offset(V)       Threads Handles SessionId       
 NB: as see there we have a PID that spawned the malicous process was triggered by the PID = 4364
 ```
 
+qn 3
+```
+This qn need the md5 hash, and in inorder to get the hash we need to dump the the pid and once we get the file we can easy calculate the hash from it
+
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/ROGUE]                                                                                                                                                                                            
+└─$ vol.py -f 20230810.mem windows.dumpfiles.DumpFiles --pid 6812 
+
+now lets run the command:
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/ROGUE]
+└─$ md5sum file.0x9e8b91ec0140.0x9e8b90819750.DataSectionObject.svchost.exe.dat 
+d41d8cd98f00b204e9800998ecf8427e  file.0x9e8b91ec0140.0x9e8b90819750.DataSectionObject.svchost.exe.dat
+                                                                                                                                                                                                                                              
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/ROGUE]
+└─$ md5sum file.0x9e8b91ec0140.0x9e8b957f24c0.ImageSectionObject.svchost.exe.img
+5bd547c6f5bfc4858fe62c8867acfbb5  file.0x9e8b91ec0140.0x9e8b957f24c0.ImageSectionObject.svchost.exe.img
+
+answer:5bd547c6f5bfc4858fe62c8867acfbb5
+
+```
+
+qn 4
+```
+question 4 need us to get the connection was established to which machine, if we recal qn1, the connection was established from this source ip and port number
+
+answer:13.127.155.166:8888
+```
+
+qn 5:
+```
+This question was a chain question of qn1 and qn4 so in order to get the timestamp the connection were established we just need to check check qn1 the or qn4
+
+answer:10/08/2023 11:30:03
+```
+
+qn 6
+```
+I thought it would be easy and a direct question scan the disire PID 6812
+
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/ROGUE]
+└─$ vol.py -f 20230810.mem windows.psscan.PsScan --pid 6812
+Volatility 3 Framework 2.5.2
+Progress:  100.00               PDB scanning finished                        
+PID     PPID    ImageFileName   Offset(V)       Threads Handles SessionId       Wow64   CreateTime      ExitTime        File output
+
+6812    7436    svchost.exe     0x9e8b87762080  3       -       1       False   2023-08-10 11:30:03.000000      N/A     Disabled
 
 
+And from here we can get the offset we want
+answer:0x9e8b87762080
+```
 
 
+qn 7
+```
+It is very clear here that we need to upload our file to the virus total and if we view details we get
 
+answer:10/08/2023 11:58:10
+```
 
+```
+NEW IDEA: YES
 
-
-
-
-
-
-
-
+CHALLENGES: The big challenge here was my standalone volatility was not working so decide to check for volatility-master(V-python2) the got the same problem so decide to check for the last update from volatility3(V-python3) which worked
+```
 
 
