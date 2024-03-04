@@ -22,4 +22,6 @@ qn2
 
 answer: 44.204.18.94,95.181.232.32,195.80.150.137
 answer:/opt/automation/updater.sh
+answer:wget
+answer:/opt/automation/
 ```
