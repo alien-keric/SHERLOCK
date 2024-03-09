@@ -5,7 +5,7 @@ The host is used as a dumping ground for a lot of people at the company but it�
 it’s up to you to figure out what has happened and what data has been taken.
 ```
 
-its a pcap file inside
+its a pcap file inside the zip file( Task 3 can be answered after decoding the hex value using any tool from the pcap file
 ```
 ┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/LITTLE]
 └─$ ls
@@ -25,6 +25,8 @@ desktop-umncbe7\test
 
 C:\Users\test\Downloads>
 
+
+answer(TASK 3) : command:whoami
 answ(Task 4): dnscat-v0.07(tool used to enumerate the domain name)
 
 N/B: ren( a command in windows that can be used to rename the a file or directory)
