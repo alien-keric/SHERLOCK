@@ -5,7 +5,7 @@ The host is used as a dumping ground for a lot of people at the company but it�
 it’s up to you to figure out what has happened and what data has been taken.
 ```
 
-its a pcap file inside the zip file( Task 3 can be answered after decoding the hex value using any tool from the pcap file
+its a pcap file inside the zip file( Task 3-8 can be answered after decoding the hex value using any tool from the pcap file
 ```
 ┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/LITTLE]
 └─$ ls
