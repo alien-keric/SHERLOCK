@@ -13,4 +13,32 @@ litter.zip  suspicious_traffic.pcap
 
 answ(1): DNS
 answ(2):192.168.157.145
+
+ip.addr == 192.168.157.145&&dns
+
+5e36011ccd4160752877686f616d690a6465736b746f702d756d6e636265<375c746573740d0a0d0a433a5c55736572735c746573745c446f776e6c6f.6164733e
+
+after decrpt
+
+^6ÍA`u(whoami
+desktop-umncbe7\test
+
+C:\Users\test\Downloads>
+
+answ(Task 4): dnscat-v0.07(tool used to enumerate the domain name)
+
+N/B: ren( a command in windows that can be used to rename the a file or directory)
+
+answer(Task 5):win_installer.exe ( here the attacker tried to rename the dnscat2-v0.07-client-win32.exe  to win_installer.exe
+
+
+answer(Task 6): 0 ( 0 records were found from the cloud storage)
+
+
+
+answer(Task 7):C:\Users\test\Documents\client data optimisation\user details.csv
+
+
+answer(8):721 (the number of records were stolen)
+
 ```
