@@ -4,3 +4,13 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 The host is used as a dumping ground for a lot of people at the company but it’s very useful, so no one has raised any issues.Little does Khalid know; the machine has been compromised and company information that should not have been on there has now been stolen –
 it’s up to you to figure out what has happened and what data has been taken.
 ```
+
+its a pcap file inside
+```
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/LITTLE]
+└─$ ls
+litter.zip  suspicious_traffic.pcap
+
+answ(1): DNS
+answ(2):192.168.157.145
+```
