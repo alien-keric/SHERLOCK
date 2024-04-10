@@ -51,5 +51,58 @@ Mar  6 06:31:39 ip-172-31-35-28 sshd[2384]: Received disconnect from 65.2.161.68
 Mar  6 06:31:39 ip-172-31-35-28 sshd[2384]: Disconnected from invalid user svc_account 65.2.161.68 port 46732 [preauth] 
 Mar  6 06:31:39 ip-172-31-35-28 sshd[2409]: Failed password for root from 65.2.161.68 port 46890 ssh2
 Mar  6 06:31:40 ip-172-31-35-28 sshd[2411]: Accepted password for root from 65.2.161.68 port 34782 ssh2
+```
+
+
+## qn3
+```
+HINT:
+In Linux operating systems everything is logged some where. Most of the system logs are logged in to /var/log folder. This folder contains logs related to different services and applications. In this folder we have some files such as utmp, wtmp and btmp. These files contains all the details about login’s and logout’s which are from local as well as from remote systems and system status such as uptime etc.
+
+utmp will give you complete picture of users logins at which terminals, logouts, system events and current status of the system, system boot time (used by uptime) etc.
+
+wtmp gives historical data of utmp.
+
+btmp records only failed login attempts.
+
+# last ( Provide how logged in, when they logged in and when they logged out etc info on the screen.)
+
+# last -f /var/log/wtmp (To open wtmp file and view its content use blow command)
+
+# last -f /var/run/utmp (To see still logged in users view utmp file use last command)
+
+# last -f /var/log/btmp (To view btmp file use same command)
+
+
 
 ```
+
+## qn4
+```
+answer:37
+
+HINT:
+Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: Accepted password for root from 65.2.161.68 port 53184 ssh2                                                                                                                                       
+Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)                                                                                                                            
+Mar  6 06:32:44 ip-172-31-35-28 systemd-logind[411]: New session 37 of user root. 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
