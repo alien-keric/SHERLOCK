@@ -57,9 +57,10 @@ Mar  6 06:31:40 ip-172-31-35-28 sshd[2411]: Accepted password for root from 65.2
 ## qn3
 ```
 
-
 answer:2024-03-06T06:32:45
-
+                                                                                                                                                                                                                                              
+┌──(alienx㉿alienX)-[~/Desktop/PPP/SHERLOCK/BRUTUS]
+└─$ utmpdump wtmp 
 [7] [01583] [ts/0] [root    ] [pts/0       ] [203.101.190.9       ] [203.101.190.9  ] [2024-03-06T06:19:55,151913+00:00]
 [7] [02549] [ts/1] [root    ] [pts/1       ] [65.2.161.68         ] [65.2.161.68    ] [2024-03-06T06:32:45,387923+00:00]
 [8] [02491] [    ] [        ] [pts/1       ] [                    ] [0.0.0.0        ] [2024-03-06T06:37:24,590579+00:00]
@@ -135,7 +136,14 @@ While it's possible the attacker might use a domain account for persistence (T11
 Understanding the context and the specific details of the attack is crucial for accurate MITRE ATT&CK identification. Thank you for your patience and for helping me learn from my mistakes.
 ```
 
+## qn 7
+```
+answer:279
 
+HINT:
+
+calculating the time difference from 06:32:45-06:37:24
+```
 
 ## qn 8
 ```
